@@ -9,7 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LojaComponent } from './loja/loja.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { EditarComponent } from './editar/editar.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms'
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    LojaComponent
+    LojaComponent,
+    EditarComponent
 
   ],
   imports: [

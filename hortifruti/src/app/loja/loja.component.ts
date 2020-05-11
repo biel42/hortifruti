@@ -10,6 +10,7 @@ import { Produtos } from '../model/Produtos';
 export class LojaComponent implements OnInit {
 
   listaProdutos: Produtos[]
+  produto: Produtos = new Produtos
 
   constructor(private produtosService: ProdutosService) { }
 
@@ -22,4 +23,12 @@ export class LojaComponent implements OnInit {
       this.listaProdutos = resp
     })
   }
+
+  cadastrarProduto() {
+    this.produtosService.postProdutos(this.produto).subscribe((resp: Produtos) => {
+      this.produto = resp
+      location.assign('/loja')
+    })
+  }
+
 }

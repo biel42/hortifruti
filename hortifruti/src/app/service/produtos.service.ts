@@ -13,4 +13,8 @@ export class ProdutosService {
     return this.http.get('http://31.220.57.121:9080/produtos/');
   }
 
+  postProdutos(produto: Produtos) {
+    return this.http.post('http://31.220.57.121:9080/produtos/', produto)
+  }
+
 }

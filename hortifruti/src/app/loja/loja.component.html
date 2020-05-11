@@ -33,11 +33,28 @@
 
     <div class="row mb-5">
         <div class="col-md-12">
-            <h3 class="text-center">Bem vindo à Loja</h3>
+            <h3 class="text-center mb-3">Bem vindo à Loja</h3>
         </div>
 
+        <div class="row">
 
-
+            <div class="card mb-3" class="col-md-3" *ngFor="let produto of listaProdutos">
+                <div class="shadow-sm">
+                    <img class="card-img-top" src="{{ produto.imagem }}" alt="Card image cap">
+                    <div class="card-body mb-2">
+                        <h5 class="card-title d-flex justify-content-center">{{ produto.nome }}</h5>
+                        <div class="card-text  d-flex justify-content-center">Código do produto: {{ produto.id }} </div>
+                        <div class="card-text  d-flex justify-content-center">Preço: R{{ produto.preco | currency}}
+                        </div>
+                        <div class="card-text  d-flex justify-content-center">estoque:
+                            {{ produto.qtdEstoque }}
+                        </div>
+                        <div class=" d-flex justify-content-center mt-3">
+                            <a href="#" class="btn btn-outline-success mr-2">Editar</a>
+                            <a href="#" class="btn btn-outline-danger">Apagar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>

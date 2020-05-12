@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <div class="mb-5">
+    <div class="mb-3">
         <div class="form-group">
             <label for="nome">Nome do produto:</label>
             <input type="text" class="form-control" id="nome" [(ngModel)]="produto.nome"
@@ -34,11 +34,20 @@
             </div>
         </div>
     </div>
-
+    <hr>
+    <div class="row pesquisa">
+        <div class=" col-md-12 d-flex justify-content-center">
+            <input type="text" class="form-control" placeholder="Pesquisar por nome do produto"
+                [(ngModel)]="NomeProduto">
+            <button class="btn btn-outline-success" (click)='pesquisarPorNomeProduto()'>Pesquisar</button>
+        </div>
+    </div>
+    <hr>
     <div class="row mb-5">
         <div class="col-md-12">
             <h3 class="text-center mb-3">Bem vindo à Loja</h3>
         </div>
+
 
         <div class="row">
 

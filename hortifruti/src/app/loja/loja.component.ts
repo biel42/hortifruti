@@ -12,6 +12,8 @@ export class LojaComponent implements OnInit {
   listaProdutos: Produtos[]
   produto: Produtos = new Produtos
 
+  NomeProduto: string
+
   constructor(private produtosService: ProdutosService) { }
 
   ngOnInit() {
@@ -31,4 +33,9 @@ export class LojaComponent implements OnInit {
     })
   }
 
+  pesquisarPorNomeProduto() {
+    this.produtosService.findByProduto(this.NomeProduto).subscribe((resp: Produtos[]) => {
+      this.listaProdutos = resp
+    })
+  }
 }

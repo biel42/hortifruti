@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="card-img-top" src="{{ produto.imagem }}" alt="Card image cap">
+        </div>
+
+        <div class="col-md-8">
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ produto.nome }}</h5>
+                    <hr>
+                    <p class="card-text">Preço: R{{ produto.preco | currency}}</p>
+
+                </div>
+            </div>
+            <hr class="mt-5">
+            <div class="row mt-2">
+                <div class="col-md-12 d-flex justify-content-center mb-3">
+                    <h2>Tem Certeza que deseja deletar esse produto?</h2>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center mt-2 mb-3">
+                    <button type="button" class="btn btn-outline-danger mr-3" (click)="btnSim()">Sim</button>
+                    <button type="button" class="btn btn-outline-success" (click)="btnNao()">Não</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

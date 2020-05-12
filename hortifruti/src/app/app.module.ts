@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { LojaComponent } from './loja/loja.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { EditarComponent } from './editar/editar.component'
+import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditarComponent } from './editar/editar.component'
     FooterComponent,
     HomeComponent,
     LojaComponent,
-    EditarComponent
+    EditarComponent,
+    DeletarComponent
 
   ],
   imports: [
